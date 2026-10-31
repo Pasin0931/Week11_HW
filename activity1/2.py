@@ -26,7 +26,14 @@ def update_user_profile(user_id, updated_fields):
     print(f"[CACHE INVALIDATED] Deleted cache:user:{user_id}")
 
 
-get_user_profile(1)
-get_user_profile(1)
-update_user_profile(1, {"role": "Admin"})
-get_user_profile(1)  
+res = get_user_profile(1)
+print(res, "\n")
+
+res = get_user_profile(1)
+print(res, "\n")
+
+res = update_user_profile(1, {"role": "Admin"})
+print(res, "\n")
+
+res = get_user_profile(1)  
+print(res, "\n")
